@@ -27,6 +27,10 @@ public class BaldeRepository {
         return baldeDao.observarAtivos();
     }
 
+    public LiveData<List<Balde>> observarAtivosPorFrequencia() {
+        return baldeDao.observarAtivosPorFrequencia();
+    }
+
     public LiveData<Balde> observarPorId(long id) {
         return baldeDao.observarPorId(id);
     }

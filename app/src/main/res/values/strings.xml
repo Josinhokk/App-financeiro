@@ -5,8 +5,18 @@
     <string name="nav_transacoes">Transações</string>
     <string name="nav_baldes">Baldes</string>
 
-    <string name="placeholder_lancar">Lançamento rápido chega no slice 5</string>
-    <string name="placeholder_transacoes">Lista de transações chega no slice 4</string>
+    <string name="placeholder_transacoes">Lista de transações chega no próximo slice</string>
+
+    <!-- Lançamento rápido (seção 7.1) -->
+    <string name="quanto_gastou">Quanto você gastou?</string>
+    <string name="valor_zero">R$ 0,00</string>
+    <string name="em_qual_balde">Em qual balde?</string>
+    <string name="tocar_salva">Tocar no balde salva o gasto</string>
+    <string name="mais_detalhes">Mais detalhes</string>
+    <string name="menos_detalhes">Menos detalhes</string>
+    <string name="campo_descricao">Descrição (opcional)</string>
+    <string name="data_da_compra">Data da compra</string>
+    <string name="lancado_em">%1$s em %2$s</string>
 
     <!-- Baldes -->
     <string name="novo_balde">Novo balde</string>

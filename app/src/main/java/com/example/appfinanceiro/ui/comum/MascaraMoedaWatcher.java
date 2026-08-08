@@ -15,12 +15,23 @@ import com.example.appfinanceiro.core.MascaraMoeda;
  */
 public class MascaraMoedaWatcher implements TextWatcher {
 
+    /** Avisa a tela a cada mudança de valor — o lançamento rápido revela os
+     *  chips de balde assim que o valor deixa de ser zero (seção 7.1). */
+    public interface AoMudarValor {
+        void mudou(long centavos);
+    }
+
     private final EditText campo;
     private boolean reescrevendo;
     private long centavos;
+    private AoMudarValor aoMudarValor;
 
     public MascaraMoedaWatcher(EditText campo) {
         this.campo = campo;
+    }
+
+    public void setAoMudarValor(AoMudarValor ouvinte) {
+        this.aoMudarValor = ouvinte;
     }
 
     public long getCentavos() {
@@ -35,6 +46,7 @@ public class MascaraMoedaWatcher implements TextWatcher {
         campo.setText(texto);
         campo.setSelection(texto.length());
         reescrevendo = false;
+        notificar();
     }
 
     @Override
@@ -48,6 +60,11 @@ public class MascaraMoedaWatcher implements TextWatcher {
         campo.setText(texto);
         campo.setSelection(texto.length());
         reescrevendo = false;
+        notificar();
+    }
+
+    private void notificar() {
+        if (aoMudarValor != null) aoMudarValor.mudou(centavos);
     }
 
     @Override

@@ -1,12 +1,8 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# Config de IDE inteira fora: é máquina do desenvolvedor, não do projeto.
+/.idea/
 .DS_Store
 /build
 /captures

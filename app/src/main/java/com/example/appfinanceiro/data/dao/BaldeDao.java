@@ -29,6 +29,18 @@ public interface BaldeDao {
     @Query("SELECT * FROM baldes WHERE arquivado = 0 ORDER BY ordem, nome")
     LiveData<List<Balde>> observarAtivos();
 
+    /**
+     * Baldes ordenados pelo que o usuário mais usa — os chips do lançamento
+     * rápido dependem disso (seção 7.1). Balde nunca usado cai para o fim,
+     * mantendo a ordem manual como critério de desempate.
+     */
+    @Query("SELECT b.* FROM baldes b " +
+            "LEFT JOIN transacoes t ON t.baldeId = b.id AND t.tipo = 'SAIDA' " +
+            "WHERE b.arquivado = 0 " +
+            "GROUP BY b.id " +
+            "ORDER BY COUNT(t.id) DESC, b.ordem, b.nome")
+    LiveData<List<Balde>> observarAtivosPorFrequencia();
+
     @Query("SELECT * FROM baldes WHERE id = :id")
     Balde buscarPorId(long id);
 
