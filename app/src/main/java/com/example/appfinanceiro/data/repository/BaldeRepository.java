@@ -27,8 +27,24 @@ public class BaldeRepository {
         return baldeDao.observarAtivos();
     }
 
+    public LiveData<Balde> observarPorId(long id) {
+        return baldeDao.observarPorId(id);
+    }
+
     public void inserir(Balde b) {
         io.execute(() -> baldeDao.inserir(b));
+    }
+
+    /** Balde novo entra no fim da lista; a ordem é resolvida na thread de IO. */
+    public void inserirNoFim(Balde b) {
+        io.execute(() -> {
+            b.setOrdem(baldeDao.proximaOrdem());
+            baldeDao.inserir(b);
+        });
+    }
+
+    public void arquivar(long id) {
+        io.execute(() -> baldeDao.arquivar(id));
     }
 
     public void atualizar(Balde b) {

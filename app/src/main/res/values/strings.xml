@@ -7,5 +7,35 @@
 
     <string name="placeholder_lancar">Lançamento rápido chega no slice 5</string>
     <string name="placeholder_transacoes">Lista de transações chega no slice 4</string>
-    <string name="placeholder_baldes">CRUD de baldes chega no slice 3</string>
+
+    <!-- Baldes -->
+    <string name="novo_balde">Novo balde</string>
+    <string name="editar_balde">Editar balde</string>
+    <string name="baldes_vazio_titulo">Nenhum balde por aqui</string>
+    <string name="baldes_vazio_ajuda">Crie um balde para dizer de qual bolso o dinheiro sai.</string>
+    <string name="subtitulo_balde">%1$s · %2$s</string>
+    <string name="rola_saldo_curto">acumula</string>
+    <string name="zera_curto">zera todo mês</string>
+
+    <string name="tipo_fixo">Fixo</string>
+    <string name="tipo_investimento">Investimento</string>
+    <string name="tipo_meta">Meta</string>
+    <string name="tipo_livre">Livre</string>
+
+    <string name="campo_nome">Nome</string>
+    <string name="campo_tipo">Tipo</string>
+    <string name="campo_valor_mensal">Valor mensal</string>
+    <string name="campo_rola_saldo">Acumular saldo</string>
+    <string name="ajuda_rola_saldo_ligado">O que sobrar empilha para o mês seguinte.</string>
+    <string name="ajuda_rola_saldo_desligado">Zera todo dia 1. O que sobrar vira folga do mês, não bônus futuro.</string>
+
+    <string name="salvar">Salvar</string>
+    <string name="arquivar">Arquivar balde</string>
+    <string name="arquivar_confirmar_titulo">Arquivar %1$s?</string>
+    <string name="arquivar_confirmar_texto">Ele sai da lista, mas as transações já lançadas continuam intactas.</string>
+    <string name="cancelar">Cancelar</string>
+
+    <string name="erro_nome_vazio">Dê um nome ao balde</string>
+    <string name="erro_nome_longo">Nome muito longo (máx. %1$d caracteres)</string>
+    <string name="balde_arquivado">%1$s arquivado</string>
 </resources>

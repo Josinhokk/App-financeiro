@@ -21,6 +21,26 @@
         android:id="@+id/baldesFragment"
         android:name="com.example.appfinanceiro.ui.baldes.BaldesFragment"
         android:label="@string/nav_baldes"
-        tools:layout="@layout/fragment_baldes" />
+        tools:layout="@layout/fragment_baldes">
+
+        <action
+            android:id="@+id/action_baldesFragment_to_baldeFormFragment"
+            app:destination="@id/baldeFormFragment" />
+
+    </fragment>
+
+    <!-- Bottom sheet: formulário curto não merece tela cheia. -->
+    <dialog
+        android:id="@+id/baldeFormFragment"
+        android:name="com.example.appfinanceiro.ui.baldes.BaldeFormFragment"
+        android:label="@string/novo_balde"
+        tools:layout="@layout/fragment_balde_form">
+
+        <argument
+            android:name="baldeId"
+            android:defaultValue="0L"
+            app:argType="long" />
+
+    </dialog>
 
 </navigation>

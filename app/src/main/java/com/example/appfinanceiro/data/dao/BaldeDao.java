@@ -32,8 +32,21 @@ public interface BaldeDao {
     @Query("SELECT * FROM baldes WHERE id = :id")
     Balde buscarPorId(long id);
 
+    @Query("SELECT * FROM baldes WHERE id = :id")
+    LiveData<Balde> observarPorId(long id);
+
     @Query("SELECT COUNT(*) FROM baldes")
     int contarTodos();
+
+    /**
+     * Arquivar em vez de deletar: as transações já lançadas continuam
+     * apontando para o balde, então apagar a linha destruiria histórico.
+     */
+    @Query("UPDATE baldes SET arquivado = 1 WHERE id = :id")
+    void arquivar(long id);
+
+    @Query("SELECT COALESCE(MAX(ordem), -1) + 1 FROM baldes")
+    int proximaOrdem();
 
     @Query("UPDATE baldes SET saldoAcumuladoCentavos = :saldoCentavos WHERE id = :id")
     void atualizarSaldoAcumulado(long id, long saldoCentavos);
