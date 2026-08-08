@@ -1,5 +1,6 @@
 package com.example.appfinanceiro.data.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -59,4 +60,9 @@ public interface TransacaoDao {
             "WHERE dataCompetencia BETWEEN :inicio AND :fim " +
             "ORDER BY dataCompetencia DESC, id DESC")
     List<Transacao> listarPorPeriodo(LocalDate inicio, LocalDate fim);
+
+    @Query("SELECT * FROM transacoes " +
+            "WHERE dataCompetencia BETWEEN :inicio AND :fim " +
+            "ORDER BY dataCompetencia DESC, id DESC")
+    LiveData<List<Transacao>> observarPorPeriodo(LocalDate inicio, LocalDate fim);
 }

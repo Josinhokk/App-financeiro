@@ -1,5 +1,6 @@
 package com.example.appfinanceiro.data.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -25,8 +26,14 @@ public interface BaldeDao {
     @Query("SELECT * FROM baldes WHERE arquivado = 0 ORDER BY ordem, nome")
     List<Balde> listarAtivos();
 
+    @Query("SELECT * FROM baldes WHERE arquivado = 0 ORDER BY ordem, nome")
+    LiveData<List<Balde>> observarAtivos();
+
     @Query("SELECT * FROM baldes WHERE id = :id")
     Balde buscarPorId(long id);
+
+    @Query("SELECT COUNT(*) FROM baldes")
+    int contarTodos();
 
     @Query("UPDATE baldes SET saldoAcumuladoCentavos = :saldoCentavos WHERE id = :id")
     void atualizarSaldoAcumulado(long id, long saldoCentavos);
