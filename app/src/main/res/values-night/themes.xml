@@ -1,7 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.AppFinanceiro" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/positivo</item>
+        <item name="colorOnPrimary">@color/fundo_escuro</item>
+        <item name="colorPrimaryContainer">@color/verde_escuro</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorSecondary">@color/verde_esmeralda</item>
+        <item name="colorOnSecondary">@color/fundo_escuro</item>
+        <item name="colorError">@color/negativo</item>
+        <item name="android:colorBackground">@color/fundo_escuro</item>
+        <item name="colorSurface">@color/superficie_escura</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/texto_secundario</item>
     </style>
 </resources>

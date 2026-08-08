@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Os ids batem com os das destinations do nav_graph: é assim que o
+         NavigationUI liga aba -> destino sem código extra. -->
+    <item
+        android:id="@+id/lancarFragment"
+        android:icon="@drawable/ic_lancar"
+        android:title="@string/nav_lancar" />
+
+    <item
+        android:id="@+id/transacoesFragment"
+        android:icon="@drawable/ic_transacoes"
+        android:title="@string/nav_transacoes" />
+
+    <item
+        android:id="@+id/baldesFragment"
+        android:icon="@drawable/ic_baldes"
+        android:title="@string/nav_baldes" />
+
+</menu>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">App financeiro</string>
+
+    <string name="nav_lancar">Lançar</string>
+    <string name="nav_transacoes">Transações</string>
+    <string name="nav_baldes">Baldes</string>
+
+    <string name="placeholder_lancar">Lançamento rápido chega no slice 5</string>
+    <string name="placeholder_transacoes">Lista de transações chega no slice 4</string>
+    <string name="placeholder_baldes">CRUD de baldes chega no slice 3</string>
 </resources>

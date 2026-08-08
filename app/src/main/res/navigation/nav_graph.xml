@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/lancarFragment">
+
+    <fragment
+        android:id="@+id/lancarFragment"
+        android:name="com.example.appfinanceiro.ui.lancar.LancarFragment"
+        android:label="@string/nav_lancar"
+        tools:layout="@layout/fragment_lancar" />
+
+    <fragment
+        android:id="@+id/transacoesFragment"
+        android:name="com.example.appfinanceiro.ui.transacoes.TransacoesFragment"
+        android:label="@string/nav_transacoes"
+        tools:layout="@layout/fragment_transacoes" />
+
+    <fragment
+        android:id="@+id/baldesFragment"
+        android:name="com.example.appfinanceiro.ui.baldes.BaldesFragment"
+        android:label="@string/nav_baldes"
+        tools:layout="@layout/fragment_baldes" />
+
+</navigation>

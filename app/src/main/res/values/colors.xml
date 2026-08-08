@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Identidade visual — seção 9 do plano -->
+    <color name="verde_esmeralda">#10B981</color>
+    <color name="verde_escuro">#047857</color>
+    <color name="positivo">#34D399</color>
+    <color name="negativo">#EF4444</color>
+    <color name="alerta">#F59E0B</color>
+    <color name="fundo_claro">#F9FAFB</color>
+    <color name="fundo_escuro">#111827</color>
+    <color name="superficie_clara">#FFFFFF</color>
+    <color name="superficie_escura">#1F2937</color>
+    <color name="texto_principal">#1F2937</color>
+    <color name="texto_secundario">#6B7280</color>
 </resources>
