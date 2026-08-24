@@ -5,7 +5,11 @@
     <string name="nav_transacoes">Transações</string>
     <string name="nav_baldes">Baldes</string>
 
-    <string name="placeholder_transacoes">Lista de transações chega no próximo slice</string>
+    <!-- Lista de transações -->
+    <string name="transacoes_vazio_titulo">Nenhum lançamento este mês</string>
+    <string name="transacoes_vazio_ajuda">O que você lançar na aba Lançar aparece aqui.</string>
+    <string name="sem_descricao">Sem descrição</string>
+    <string name="sem_balde">Sem balde</string>
 
     <!-- Lançamento rápido (seção 7.1) -->
     <string name="quanto_gastou">Quanto você gastou?</string>

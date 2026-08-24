@@ -65,4 +65,15 @@ public interface TransacaoDao {
             "WHERE dataCompetencia BETWEEN :inicio AND :fim " +
             "ORDER BY dataCompetencia DESC, id DESC")
     LiveData<List<Transacao>> observarPorPeriodo(LocalDate inicio, LocalDate fim);
+
+    /**
+     * Mesma janela de competência, já com o balde resolvido para a lista.
+     * LEFT JOIN porque transação sem balde é caso válido.
+     */
+    @Query("SELECT t.*, b.nome AS baldeNome, b.corHex AS baldeCorHex " +
+            "FROM transacoes t " +
+            "LEFT JOIN baldes b ON b.id = t.baldeId " +
+            "WHERE t.dataCompetencia BETWEEN :inicio AND :fim " +
+            "ORDER BY t.dataCompetencia DESC, t.id DESC")
+    LiveData<List<TransacaoComBalde>> observarComBaldePorPeriodo(LocalDate inicio, LocalDate fim);
 }

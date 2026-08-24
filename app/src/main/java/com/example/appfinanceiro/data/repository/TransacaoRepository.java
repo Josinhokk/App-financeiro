@@ -2,6 +2,7 @@ package com.example.appfinanceiro.data.repository;
 
 import androidx.lifecycle.LiveData;
 
+import com.example.appfinanceiro.data.dao.TransacaoComBalde;
 import com.example.appfinanceiro.data.dao.TransacaoDao;
 import com.example.appfinanceiro.data.entity.Transacao;
 
@@ -21,6 +22,10 @@ public class TransacaoRepository {
 
     public LiveData<List<Transacao>> observarPorPeriodo(LocalDate inicio, LocalDate fim) {
         return dao.observarPorPeriodo(inicio, fim);
+    }
+
+    public LiveData<List<TransacaoComBalde>> observarComBaldePorPeriodo(LocalDate inicio, LocalDate fim) {
+        return dao.observarComBaldePorPeriodo(inicio, fim);
     }
 
     public void inserir(Transacao t) {
